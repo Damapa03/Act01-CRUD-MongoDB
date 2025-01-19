@@ -15,12 +15,22 @@ class JuegoRepository {
 
             val duplicado = searchGame(juego.titulo)
 
+           var tituloDuplicado = ""
 
-            JuegosDAO.coll.insertOne(documento)
+            duplicado.forEach {documento ->
+
+                tituloDuplicado = documento?.getString("titulo").toString()
+
+            }
+
+            if (juego.titulo != tituloDuplicado){
+                JuegosDAO.coll.insertOne(documento)
+            }else println("El titulo introducido ya existe")
+
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
         } finally {
-//            JuegosDAO.close()
+            JuegosDAO.close()
         }
     }
 
@@ -35,7 +45,7 @@ class JuegoRepository {
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
         } finally {
-//            JuegosDAO.close()
+            JuegosDAO.close()
         }
 
         return lista
@@ -63,7 +73,7 @@ class JuegoRepository {
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
         } finally {
-//            JuegosDAO.close()
+            JuegosDAO.close()
         }
     }
 
@@ -76,7 +86,7 @@ class JuegoRepository {
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
         } finally {
-//            JuegosDAO.close()
+            JuegosDAO.close()
         }
     }
 
