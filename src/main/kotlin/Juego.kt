@@ -2,8 +2,8 @@
 
 class Juego(
     val titulo: String,
-    val genero: String?,
-    val precio: Double?,
-    val lanzamiento: LocalDate?
+    var genero: String?,
+    var precio: Double?,
+    var lanzamiento: LocalDate?
 ) {
 }

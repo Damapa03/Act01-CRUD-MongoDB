@@ -35,7 +35,20 @@ fun main() {
 
         }
         if (num == 3) {
+            println("Introduzca el juego a modificar")
+            val titulo = readln()
+            if (titulo != "") {
+                println("Introduzca el genero")
+                val genero = readln()
+                println("Introduzca el precio")
+                val precio = readln().toDouble()
+                println("Introduzca la fecha")
+                val fecha = LocalDate.now()
 
+                val juego = Juego(titulo, genero, precio, fecha)
+
+                juegoRepository.modify(titulo, juego)
+            }else println("Por favor introduzca un juego")
         }
         if (num == 4) {
             println("Introduzca el genero de los juegos que quiere borrar")
