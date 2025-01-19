@@ -29,8 +29,6 @@ class JuegoRepository {
 
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
-        } finally {
-            JuegosDAO.close()
         }
     }
 
@@ -44,8 +42,6 @@ class JuegoRepository {
             results.forEach { lista.add(it) }
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
-        } finally {
-            JuegosDAO.close()
         }
 
         return lista
@@ -72,8 +68,6 @@ class JuegoRepository {
 
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
-        } finally {
-            JuegosDAO.close()
         }
     }
 
@@ -85,8 +79,6 @@ class JuegoRepository {
             JuegosDAO.coll.deleteMany(filtro)
         } catch (e: Exception) {
             println("Error al conectar a MongoDB: ${e.message}")
-        } finally {
-            JuegosDAO.close()
         }
     }
 

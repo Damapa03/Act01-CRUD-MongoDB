@@ -16,6 +16,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-kotlin
     implementation("io.github.cdimascio:dotenv-kotlin:6.4.2")
+
 }
 
 tasks.test {
