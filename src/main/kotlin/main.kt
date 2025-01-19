@@ -25,8 +25,14 @@ fun main() {
                 val genero = readln()
                 println("Introduzca el precio")
                 val precio = readln().toDouble()
-                println("Introduzca la fecha de lanzamiento")
-                val fecha = LocalDate.now()
+                println("Introduzca el dia de lanzamiento")
+                val dia = readln().toInt()
+                println("Introduzca el mes de lanzamiento")
+                val mes = readln().toInt()
+                println("Introduzca el año de lanzamiento")
+                val anio = readln().toInt()
+
+                val fecha = LocalDate.of(anio, mes ,dia)
                 val juego = Juego(titulo, genero, precio, fecha)
 
                 juegoRepository.create(juego)
@@ -42,8 +48,14 @@ fun main() {
                 val genero = readln()
                 println("Introduzca el precio")
                 val precio = readln().toDouble()
-                println("Introduzca la fecha")
-                val fecha = LocalDate.now()
+                println("Introduzca el dia de lanzamiento")
+                val dia = readln().toInt()
+                println("Introduzca el mes de lanzamiento")
+                val mes = readln().toInt()
+                println("Introduzca el año de lanzamiento")
+                val anio = readln().toInt()
+
+                val fecha = LocalDate.of(anio, mes ,dia)
 
                 val juego = Juego(titulo, genero, precio, fecha)
 
